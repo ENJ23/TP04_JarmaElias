@@ -12,5 +12,10 @@
 
 .aside{
 	flex: 1;
+}
 
+.logo{
+	margin: 10px;
+	width: 50%;
+	height: auto;
 }
