@@ -1,21 +1,27 @@
 @charset "UTF-8";
 
-.container{
-
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	padding: 30px;
-	margin: 0;
-	border: 0;
+.main-title{
+	text-align: center;
 }
-
-.aside{
-	flex: 1;
+.info-facultad{
+	margin:10px;
+	padding:30px;
+	border:20px;
+}
+.section-noticias{
+	margin:10px;
+	padding:30px;
+	border:20px;	
+}
+.accordion
+{
+	margin:10px;
+	padding:30px;
+	border:20px;		
 }
 
 .logo{
 	margin: 10px;
-	width: 50%;
+	width: 60%;
 	height: auto;
 }
