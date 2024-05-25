@@ -4,24 +4,36 @@
 	text-align: center;
 }
 .info-facultad{
-	margin:10px;
-	padding:30px;
-	border:20px;
+	margin:20px;
+	padding:40px;
+	border:30px;
 }
+
 .section-noticias{
 	margin:10px;
 	padding:30px;
 	border:20px;	
 }
-.accordion
-{
+
+.bloque-aside{
+	background-color: #f2f2f2; /* Color de fondo del bloque */
+    padding: 10px; /* Espaciado interno del bloque */
+    margin-bottom: 15px; /* Margen inferior del bloque */
+    border: 1px solid #ccc; /* Borde del bloque */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+.img-aside{
+	max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente */
+    display: block; /* Establece la imagen como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+.accordion {
 	margin:10px;
 	padding:30px;
 	border:20px;		
 }
-
-.logo{
+.navbar-brand{
 	margin: 10px;
-	width: 60%;
-	height: auto;
+	width: 30%;
 }
