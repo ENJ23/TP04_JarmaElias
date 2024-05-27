@@ -16,8 +16,8 @@
 </head>
 <body>
 
-	<header>
-		<div data-th-replace="~{fragments/fragmentos::navbar}"></div>
+	<header class="header-navbar">
+		<div data-th-replace="~{fragments/fragmentos::navbar}" ></div>
 		<h1 class="main-title">Facultad de Ingeniería</h1>
 	</header>
 <div class="row">
@@ -29,15 +29,50 @@
 			La facultad funcionó muchos años en la Manzana de las Luces, en el edificio de la calle Perú 222, hasta que en 1948 recibió el de la Avenida Las Heras 2214, y en 1956 el de Avenida Paseo Colón 850.
 		</div>
 		<div class="section-noticias" id="noticias">
-		<h2>Noticias Recientes</h2>
-		<h4 class="tit-noticias">Presentación del libro "EL HIDRÓGENO Y EL LITIO ACTORES FUNDAMENTALES EN LA TRANSICIÓN ENERGÉTICA"</h4>
+		<h2>Algunas Carreras Disponibles</h2>
 		
-		<p class="text-noticias"> El jueves pasado se llevó a cabo la presentación oficial del libro titulado “El hidrógeno y el litio: actores fundamentales en la transición energética”, elaborado por 18 profesionales, investigadores y docentes del campo de estudio. Entre ellos se destaca el Dr. Daniel Ernesto Galli, docente de la Facultad de Ingeniería de la Universidad Nacional de Jujuy (UNJu) y titular de la cátedra de Termodinámica.
+		<h4 class="tit-noticias">Ingenieria Informática</h4>
+		
+		<p class="text-noticias"> La ingeniería informática es la rama de la ingeniería que aplica los fundamentos de la ciencia de la computación, la ingeniería en computadores, la ingeniería de sistemas de información, la ingeniería de software y la ingeniería de redes y comunicaciones, para el desarrollo de todo tipo de software, hardware computacional y comunicaciones. Es la ingeniera encargada de estudiar la computacion y sus aplicaciones en el mundo.</p>
+		
+		<h4 class="tit-noticias">Ingenieria en Quimica</h4>
+		<p class="text-noticias">La Ingeniería Quimica es la rama que se encarga del estudio, síntesis, desarrollo, diseño, operación y optimización de todos aquellos procesos industriales que producen cambios físicos, químicos y/o bioquímicos en los materiales.</p>
+		<h4 class="tit-noticias">Ingenieria en Minas</h4>
+		<p class="text-noticias">La ingeniería de minas es la rama de la ingeniería que se ocupa de la extracción de los recursos minerales. Teniendo en cuenta la mayor especialización que cada vez requiere la sociedad. La ingeniería de minas centra sus esfuerzos en actividades como:
+				</p> 
+			    <ul>
+			    	<li>La extracción mediante técnicas y labores mineras de los recursos minerales. El conocimiento y el uso en la ingeniería de explosivos.
+			    	<li>Obtención de licencias y ejecución de planes de labores así como planificación.
+			    	<li>Ingeniero de operaciones in situ en mina.
+			    </ul> 
+			             
+		</div>
+	
+
+	<div class="accordion" id="accordionNotices" >
+		<h3>Noticias Importantes</h3>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header">
+				      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				        Presentación del libro "EL HIDRÓGENO Y EL LITIO ACTORES FUNDAMENTALES EN LA TRANSICIÓN ENERGÉTICA"
+				      </button>
+				    </h2>
+				    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+				      <div class="accordion-body">
+				        <strong>Noticia importante del día.</strong> El jueves pasado se llevó a cabo la presentación oficial del libro titulado “El hidrógeno y el litio: actores fundamentales en la transición energética”, elaborado por 18 profesionales, investigadores y docentes del campo de estudio. Entre ellos se destaca el Dr. Daniel Ernesto Galli, docente de la Facultad de Ingeniería de la Universidad Nacional de Jujuy (UNJu) y titular de la cátedra de Termodinámica.
 			La apertura estuvo a cargo de la vicedecana, la Ing. María Esther Alfaro, acompañada por una de las responsables de la edición de la obra, la Ing. Teresa Pérez (FIUBA), y el Dr. Daniel Ernesto Galli. En el evento participaron personalidades del sector de la industria, la Secretaría de Extensión, Coordinación y Planificación de la Facultad de Ingeniería de la UNJu, la Esp. Ing. Margarita Ivanovich, estudiantes, docentes e invitados especiales.
-		</p>
-		
-		<h4 class="tit-noticias">Curso de posgrado: "Derecho e Inteligencia Artificial"</h4>
-		<p class="text-noticias">La inscripción al curso se realiza completando el siguiente formulario:
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				        Curso de posgrado: "Derecho e Inteligencia Artificial"
+				      </button>
+				    </h2>
+				    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				      <div class="accordion-body">
+				        <strong>Cuestionario a Rellenar.</strong>La inscripción al curso se realiza completando el siguiente formulario:
 
 			<a href="#">https://docs.google.com/forms/u/2/d/1Fi8wJ2rz65Sms37cjcQD158rd3zWzYrtP8251O5jxSQ/edit?usp=drive_web</a>
 			
@@ -48,44 +83,19 @@
 			
 			Consultas: coordinacionposgrado@fi.unju.edu.ar
 			
-			              cibercrimen@fi.unju.edu.ar - 388-4207007</p>
-		</div>
-	
-	
-	<div class="accordion" id="accordionExample" >
-				  <div class="accordion-item">
-				    <h2 class="accordion-header">
-				      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				        Accordion Item #1
-				      </button>
-				    </h2>
-				    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-				      <div class="accordion-body">
-				        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-				      </div>
-				    </div>
-				  </div>
-				  <div class="accordion-item">
-				    <h2 class="accordion-header">
-				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				        Accordion Item #2
-				      </button>
-				    </h2>
-				    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-				      <div class="accordion-body">
-				        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+			              cibercrimen@fi.unju.edu.ar - 388-4207007
 				      </div>
 				    </div>
 				  </div>
 				  <div class="accordion-item">
 				    <h2 class="accordion-header">
 				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				        Accordion Item #3
+				        La UNJu y el Municipio de Palpalá lanzaron el programa Ciudadanía Digital UNJu. Conectando Oportunidades
 				      </button>
 				    </h2>
 				    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 				      <div class="accordion-body">
-				        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+				        <strong>Noticia en Palpalá.</strong>En el marco de las acciones que en conjunto vienen desarrollando la Universidad Nacional de Jujuy y la Municipalidad de Palpalá, se presentó una nueva iniciativa destinada a personas mayores de 16 años con el objetivo de brindar acceso a herramientas digitales.
 				      </div>
 				    </div>
 				  </div>
@@ -109,7 +119,7 @@
 		</aside>
 	</div>
 	
-	<footer id="contacto">
+	<footer id="contacto" class="footer-page">
 	<div data-th-replace="~{fragments/fragmentos::footer}"></div>
 	</footer>
 

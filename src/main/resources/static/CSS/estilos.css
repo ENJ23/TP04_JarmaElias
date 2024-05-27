@@ -8,7 +8,16 @@
 	padding:40px;
 	border:30px;
 }
-
+.navbar-1{
+	background-color: #36B0B6;
+}
+.navbar-brand{
+	margin: 10px;
+	width: 30%;
+}
+.principal{
+	background-color: #BEFCFF;
+}
 .section-noticias{
 	margin:10px;
 	padding:30px;
@@ -33,7 +42,39 @@
 	padding:30px;
 	border:20px;		
 }
-.navbar-brand{
-	margin: 10px;
-	width: 30%;
+
+.footer-page {
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
 }
+.tit-footer{
+	margin: 10px;
+	padding: 10px;
+}
+.ulist {
+	list-style-type: none;
+}
+.ulist-1{
+	list-style-type: square;
+}
+.copyright{
+	text-decoration:overline;
+	text-align: center;
+	background-color: #535F5F;
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    color: inherit; /* Hereda el color del texto del elemento padre */
+    transition: color 0.3s; /* Transición suave del color */
+}
+
+a:hover {
+    color: #0056b3; /* Cambia el color al pasar el cursor sobre el enlace */
+}
+
+
