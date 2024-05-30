@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" data-th-href="@{/web_jars/bootstrap/css/bootstrap.min.css}">
+<title>Formulario Carrera</title>
+</head>
+<body>
+	
+	<div class="container">
+	<h1>FORMULARIO DE CARRERAS</h1>
+			
+		<form data-th-object="${nuevaCarrera}">
+		  <div class="mb-3">
+		    <label for="nombre" class="form-label">Nombre de Carrera</label>
+		    <input type="text" class="form-control" id="InputCodigo">
+		    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+		  </div>
+		  <div class="mb-3">
+		    <label for="codigo" class="form-label">Codigo de Carrera</label>
+		    <input type="text" class="form-control" id="InputNombre">
+		  </div>
+		  <div class="mb-3">
+		    <label for="cantidadAños" class="form-label">Cantidad de Años	</label>
+		    <input type="number" class="form-control" id="CantidadAños">
+		  </div>
+
+		  <button type="submit" class="btn btn-primary">Guardar</button>
+		</form>
+	</div>
+
+<script data-th-src="/web_jars/bootstrap/js/bootstrap/bootrstap.bundle.min.js"></script>
+</body>
+</html>
