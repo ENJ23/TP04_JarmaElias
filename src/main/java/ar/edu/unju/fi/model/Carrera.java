@@ -4,13 +4,13 @@ public class Carrera {
 	private String codigo;
     private String nombre;
     private Integer cantidadAnios;
-    private String estado;
+    private boolean estado;
     
     public Carrera() {
     	
     }
 
-	public Carrera(String codigo, String nombre, int cantidadAnios, String estado) {
+	public Carrera(String codigo, String nombre, int cantidadAnios, boolean estado) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -42,11 +42,11 @@ public class Carrera {
 		this.cantidadAnios = cantidadAnios;
 	}
 
-	public String getEstado() {
+	public boolean isEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
     

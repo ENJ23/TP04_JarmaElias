@@ -23,6 +23,7 @@ public class ListadoCarreras {
 		}
 		
 		public static void agregarCarrera (Carrera c) {
+			c.setEstado(true);
 			carreras.add(c);
 		}
 		
