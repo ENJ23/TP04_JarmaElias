@@ -10,6 +10,8 @@ public class ListadoCarreras {
 	
 			
 		public static List<Carrera> listarCarreras(){
+			
+			//Debería listar unicamente las carreras en estado true debido al borrado logico
 			return carreras;
 		}
 		
@@ -38,7 +40,18 @@ public class ListadoCarreras {
 		}
 		
 		public static void eliminarCarrera (String codigo) {
-			carreras.removeIf(carrera -> carrera.getCodigo().equals(codigo));
+			//borrado fisico
+			//carreras.removeIf(carrera -> carrera.getCodigo().equals(codigo));    
+			
+			//borrado logico
+			for (int i = 0 ; i < carreras.size() ; i++) {
+				Carrera carrera = carreras.get(i);
+				if (carrera.getCodigo().equals(codigo)) {
+					carrera.setEstado(false);;
+					break;
+				}
+			}
+			
 		}
 }
 

@@ -1,5 +1,8 @@
 package ar.edu.unju.fi.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Carrera {
 	private String codigo;
     private String nombre;
@@ -34,11 +37,11 @@ public class Carrera {
 		this.nombre = nombre;
 	}
 
-	public int getCantidadAnios() {
+	public Integer getCantidadAnios() {
 		return cantidadAnios;
 	}
 
-	public void setCantidadAnios(int cantidadAnios) {
+	public void setCantidadAnios(Integer cantidadAnios) {
 		this.cantidadAnios = cantidadAnios;
 	}
 
