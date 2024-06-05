@@ -8,9 +8,13 @@ public class Materia {
     private String modalidad;
     private Docente docente;
     private Carrera carrera;
+    private boolean estado;
     
+    public Materia() {
+    	
+    }
 	public Materia(String codigo, String nombre, int curso, int cantidadHoras, String modalidad, Docente docente,
-			Carrera carrera) {
+			Carrera carrera, boolean estado) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -19,7 +23,10 @@ public class Materia {
 		this.modalidad = modalidad;
 		this.docente = docente;
 		this.carrera = carrera;
+		this.estado = estado;
 	}
+	
+	
 	public String getCodigo() {
 		return codigo;
 	}
@@ -62,6 +69,14 @@ public class Materia {
 	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
 	}
+	public boolean isEstado() {
+		return estado;
+	}
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
+	
+	
 
     
 }

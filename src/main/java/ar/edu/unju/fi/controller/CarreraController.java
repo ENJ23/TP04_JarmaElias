@@ -35,7 +35,7 @@ public class CarreraController {
 		ListadoCarreras.agregarCarrera(carreraParaGuardar);
 		//Mostrar Listado
 		ModelAndView modelView = new ModelAndView("listaDeCarreras");
-		modelView.addObject("listaDeCarreras" , ListadoCarreras.listarCarreras());
+		modelView.addObject("listadoCarreras" , ListadoCarreras.listarCarreras());
 		return modelView;
 	}
 	

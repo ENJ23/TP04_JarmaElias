@@ -47,7 +47,7 @@ public class ListadoCarreras {
 			for (int i = 0 ; i < carreras.size() ; i++) {
 				Carrera carrera = carreras.get(i);
 				if (carrera.getCodigo().equals(codigo)) {
-					carrera.setEstado(false);;
+					carrera.setEstado(false);
 					break;
 				}
 			}
