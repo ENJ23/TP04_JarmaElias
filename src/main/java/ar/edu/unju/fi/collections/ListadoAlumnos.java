@@ -29,10 +29,10 @@ public class ListadoAlumnos {
 		alumnos.add(a);
 	}
 	
-	public static void modificarCarrera(Alumno alumnoModificado) {
+	public static void modificarAlumno(Alumno alumnoModificado) {
 		for (int i = 0 ; i < alumnos.size() ; i++) {
-			Alumno carrera = alumnos.get(i);
-			if (carrera.getLU().equals(alumnoModificado.getLU())) {
+			Alumno alumno = alumnos.get(i);
+			if (alumno.getLU().equals(alumnoModificado.getLU())) {
 				alumnos.set(i, alumnoModificado);
 				break;
 			}

@@ -18,7 +18,7 @@ public class MateriaController {
 		//vista formCarrera.html
 		ModelAndView modelView = new ModelAndView("formMateria");
 		//Agrega el Objeto
-		modelView.addObject("nuevaCarrera", nuevaMateria);
+		modelView.addObject("nuevaMateria", nuevaMateria);
 		
 		return modelView;
 	}

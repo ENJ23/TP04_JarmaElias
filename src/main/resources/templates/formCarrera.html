@@ -8,21 +8,25 @@
 </head>
 <body>
 	
+		<header class="header-navbar">
+		<div data-th-replace="~{fragments/header::navbar}" ></div>
+		</header>
 	<div class="container">
 	<h1>FORMULARIO DE CARRERAS</h1>
 			
-		<form data-th-object="${nuevaCarrera}"
-		data-th-action="@{/guardarCarrera}"
+		<form data-th-object="${nuevaCarrera}" 
+		data-th-action="${flag}?@{/modificarCarrera}:@{/guardarCarrera}"
 		method="post"
-		>
+		> 
+		
+		  <div class="col-md-4">
+		    <label for="codigo" class="form-label">Codigo</label>
+		    <input type="text" class="form-control" id="InputCodigo" data-th-field="*{codigo}" data-th-disable="${flag}">
+		  </div>
 		  <div class="col-md-4">
 		    <label for="nombre" class="form-label">Nombre de Carrera</label>
 		    <input type="text" class="form-control" id="InputNombre" data-th-field="*{nombre}">
 		   </div> 
-		  <div class="col-md-4">
-		    <label for="codigo" class="form-label">Codigo de Carrera</label>
-		    <input type="text" class="form-control" id="InputCodigo" data-th-field="*{codigo}">
-		  </div>
 		  <div class="col-md-4">
 		    <label for="cantidadAños" class="form-label">Cantidad de Años</label>
 		    <input type="number" class="form-control" id="CantidadAños" data-th-field="*{cantidadAnios}">
@@ -31,7 +35,13 @@
 		  <button type="submit" class="btn btn-primary">Guardar</button>
 		</form>
 	</div>
-
+	
+	
+		<footer id="contacto" class="footer-page">
+		<div data-th-replace="~{fragments/footer::footer}"></div>
+		</footer>
+		
+		
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

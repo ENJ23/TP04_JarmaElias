@@ -8,6 +8,10 @@
 </head>
 <body>
 	
+		<header class="header-navbar">
+		<div data-th-replace="~{fragments/header::navbar}" ></div>
+		</header>
+	
 	<div class="container">
 	<h1>FORMULARIO DE DOCENTES</h1>
 			
@@ -25,7 +29,7 @@
 		  </div>
 		  <div class="col-md-4">
 		    <label for="apellido" class="form-label">Apellido: </label>
-		    <input type="number" class="form-control" id="apellido" data-th-field="*{apellido}">
+		    <input type="text" class="form-control" id="apellido" data-th-field="*{apellido}">
 		  </div>
 		  <div class="col-md-4">
 		    <label for="email" class="form-label">Email: </label>
@@ -39,7 +43,9 @@
 		  <button type="submit" class="btn btn-primary">Guardar</button>
 		</form>
 	</div>
-
+<footer id="contacto" class="footer-page">
+	<div data-th-replace="~{fragments/footer::footer}"></div>
+	</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

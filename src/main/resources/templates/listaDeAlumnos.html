@@ -24,7 +24,7 @@
   </thead>
   <tbody>
     <tr data-th-each="alumno : ${listadoAlumnos}">
-      <td data-th-text="${carrera.DNI}"> </td>
+      <td data-th-text="${carrera.dni}"> </td>
       <td data-th-text="${carrera.nombre}"> </td>
       <td data-th-text="${carrera.apellido}"> </td>
       <td data-th-text="${carrera.email}"> </td>
@@ -34,8 +34,8 @@
       <td data-th-text="${carrera.LU}"> </td>
       <td data-th-text="${carrera.estado}"> </td>
       <td>
-      		<a data-th-href="@{'/eliminarAlumno/'+${alumno.DNI}} " class="btn btn-danger">Borrar</a>
-      		<a data-th-href="@{'/modificarAlumno/'+${alumno.DNI}} " class="btn btn-warning">Modificar</a>
+      		<a data-th-href="@{'/eliminarAlumno/'+${alumno.LU}} " class="btn btn-danger">Borrar</a>
+      		<a data-th-href="@{'/modificarAlumno/'+${alumno.LU}} " class="btn btn-warning">Modificar</a>
       </td>
     </tr>
   </tbody>
