@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="/CSS/estilos.css">
+
 <title>Formulario Materias</title>
 </head>
 <body>
@@ -16,22 +18,48 @@
 	<h1>FORMULARIO DE MATERIAS</h1>
 			
 		<form data-th-object="${nuevaMateria}"
-		data-th-action="@{/guardarCarrera}"
+		data-th-action="@{/guardarMateria}"
 		method="post"
 		>
 		  <div class="col-md-4">
-		    <label for="nombre" class="form-label">Nombre de Carrera</label>
-		    <input type="text" class="form-control" id="InputNombre" data-th-field="*{nombre}">
+		    <label for="codigo" class="form-label">Codigo de la materia: </label>
+		    <input type="text" class="form-control" id="InputNombre" data-th-field="*{codigo}">
 		   </div> 
 		  <div class="col-md-4">
-		    <label for="codigo" class="form-label">Codigo de Carrera</label>
-		    <input type="text" class="form-control" id="InputCodigo" data-th-field="*{codigo}">
+		    <label for="nombre" class="form-label">Nombre: </label>
+		    <input type="text" class="form-control" id="InputCodigo" data-th-field="*{nombre}">
 		  </div>
 		  <div class="col-md-4">
-		    <label for="cantidadAños" class="form-label">Cantidad de Años</label>
-		    <input type="number" class="form-control" id="CantidadAños" data-th-field="*{cantidadAnios}">
+		    <label for="curso" class="form-label">Curso:</label>
+		    <input type="number" class="form-control" id="CantidadAños" data-th-field="*{curso}">
 		  </div>
+		  <div class="col-md-4">
+		    <label for="cantidadHoras" class="form-label">Cantidad de Horas: </label>
+		    <input type="number" class="form-control" id="InputNombre" data-th-field="*{cantidadHoras}">
+		   </div> 
+		  <div class="col-md-4">
+		    <label for="Modalidad" class="form-label">Modalidad: </label>
+		    <select class="form-control" id="InputCodigo" data-th-field="*{modalidad}">
+		    	<option value="Presencial">
+		    	<option value="Virtual">
+		    </select>
+		  </div>
+			<div class="col-md-4">
+		    <label for="Docente" class="form-label">Docente: </label>
+		    <select id="Docente" name="docente" data-th-field="*{docente}" required class="form-control bg-dark text-white">
+	            <option value="">Seleccione un Docente</option>
+	            <option data-th-each="d:${listadoDocentes}" data-th-value="${d}" data-th-text="${d.apellido}"></option>
 
+        	</select>
+		    </div>
+		    <div class="col-md-4">
+		    <label for="Carrera" class="form-label">Carrera: </label>
+		    <select id="Carrera" name="carrera" data-th-field="*{carrera}" class="form-control bg-dark text-white">
+	            <option value="">Seleccione una Carrera</option>
+	            <option data-th-each="c:${listadoCarreras}" data-th-value="${c}" data-th-text="${c.nombre}"></option>
+
+        	</select>
+		    </div>
 		  <button type="submit" class="btn btn-primary">Guardar</button>
 		</form>
 	</div>

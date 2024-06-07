@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 public class Materia {
 	private String codigo;
     private String nombre;
-    private int curso;
-    private int cantidadHoras;
+    private Integer curso;
+    private Integer cantidadHoras;
     private String modalidad;
     private Docente docente;
     private Carrera carrera;
@@ -16,7 +16,7 @@ public class Materia {
     public Materia() {
     	
     }
-	public Materia(String codigo, String nombre, int curso, int cantidadHoras, String modalidad, Docente docente,
+	public Materia(String codigo, String nombre, Integer curso, Integer cantidadHoras, String modalidad, Docente docente,
 			Carrera carrera, boolean estado) {
 		super();
 		this.codigo = codigo;
@@ -42,13 +42,13 @@ public class Materia {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getCurso() {
+	public Integer getCurso() {
 		return curso;
 	}
 	public void setCurso(int curso) {
 		this.curso = curso;
 	}
-	public int getCantidadHoras() {
+	public Integer getCantidadHoras() {
 		return cantidadHoras;
 	}
 	public void setCantidadHoras(int cantidadHoras) {

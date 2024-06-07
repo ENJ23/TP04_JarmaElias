@@ -14,7 +14,7 @@ public class ListadoMaterias {
 		return materias;
 	}
 	
-	public static Materia buscarCarreraPorMateria (String codigo) {
+	public static Materia buscarMateriaPorCodigo (String codigo) {
 		for (Materia m: materias) {
 			if (m.getCodigo().equals(codigo)){
 				return m;

@@ -15,9 +15,9 @@ public class ListadoAlumnos {
 		return alumnos;
 	}
 	
-	public static Alumno buscarAlumnoPorLU (String LU) {
+	public static Alumno buscarAlumnoPorDni (String dni) {
 		for (Alumno a: alumnos) {
-			if (a.getLU().equals(LU)){
+			if (a.getDni().equals(dni)){
 				return a;
 			}
 		}
@@ -39,14 +39,14 @@ public class ListadoAlumnos {
 		}
 	}
 	
-	public static void eliminarAlumno (String LU) {
+	public static void eliminarAlumno (String dni) {
 		//borrado fisico
 		//carreras.removeIf(carrera -> carrera.getCodigo().equals(codigo));    
 		
 		//borrado logico
 		for (int i = 0 ; i < alumnos.size() ; i++) {
 			Alumno alumno = alumnos.get(i);
-			if (alumno.getLU().equals(LU)) {
+			if (alumno.getDni().equals(dni)) {
 				alumno.setEstado(false);
 				break;
 			}

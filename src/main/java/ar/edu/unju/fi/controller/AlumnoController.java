@@ -20,7 +20,7 @@ public class AlumnoController {
 		//vista formCarrera.html
 		ModelAndView modelView = new ModelAndView("formAlumno");
 		//Agrega el Objeto
-		modelView.addObject("nuevaAlumno", nuevoAlumno);
+		modelView.addObject("nuevoAlumno", nuevoAlumno);
 		
 		return modelView;
 	}
@@ -38,14 +38,32 @@ public class AlumnoController {
 		return modelView;
 	}
 	
-	@GetMapping("/eliminarAlumno/{LU}")
-	public ModelAndView borrarAlumnoDelListado (@PathVariable (name="LU") String LU) {
+	@GetMapping("/eliminarAlumno/{dni}")
+	public ModelAndView borrarAlumnoDelListado (@PathVariable (name="dni") String dni) {
 		
-		ListadoAlumnos.eliminarAlumno(LU);
+		ListadoAlumnos.eliminarAlumno(dni);
 		
 		ModelAndView modelView = new ModelAndView("listaDeAlumnos");
 		modelView.addObject("listadoDeAlumnos", ListadoAlumnos.listarAlumnos());
 		
+		return modelView;
+	}
+	
+	@GetMapping("/modificarAlumno/{dni}")
+	public ModelAndView getFormModificarAlumno(@PathVariable(name="dni") String dni) {
+		Alumno nuevoAlumno = ListadoAlumnos.buscarAlumnoPorDni(dni);
+		ModelAndView modelView = new ModelAndView("formAlumno");
+		modelView.addObject("nuevoAlumno", nuevoAlumno);
+		modelView.addObject("flag", true);
+		return modelView;
+	}
+	
+	@PostMapping("/modificarAlumno")
+	public ModelAndView modificarAlumno(@ModelAttribute("nuevoAlumno") Alumno alumnoModificado) {
+		ListadoAlumnos.modificarAlumno(alumnoModificado);
+		alumnoModificado.setEstado(true);
+		ModelAndView modelView = new ModelAndView("listaDeAlumnos");
+		modelView.addObject("listadoAlumnos", ListadoAlumnos.listarAlumnos());
 		return modelView;
 	}
 }
