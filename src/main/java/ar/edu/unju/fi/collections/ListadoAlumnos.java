@@ -8,11 +8,18 @@ import ar.edu.unju.fi.model.Alumno;
 public class ListadoAlumnos {
 	
 	public static List<Alumno> alumnos = new ArrayList<Alumno>();
+	public static List<Alumno> alumnosFiltrados = new ArrayList<Alumno>();
 	
 	public static List<Alumno> listarAlumnos(){
 		
+		for (Alumno a: alumnos) {
+			if (a.isEstado()==true) {
+				alumnosFiltrados.add(a);
+			}
+		}
+		return alumnosFiltrados;
 		//Debería listar unicamente las carreras en estado true debido al borrado logico
-		return alumnos;
+		//return alumnos;
 	}
 	
 	public static Alumno buscarAlumnoPorDni (String dni) {
@@ -32,7 +39,7 @@ public class ListadoAlumnos {
 	public static void modificarAlumno(Alumno alumnoModificado) {
 		for (int i = 0 ; i < alumnos.size() ; i++) {
 			Alumno alumno = alumnos.get(i);
-			if (alumno.getLU().equals(alumnoModificado.getLU())) {
+			if (alumno.getDni().equals(alumnoModificado.getDni())) {
 				alumnos.set(i, alumnoModificado);
 				break;
 			}

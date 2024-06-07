@@ -24,15 +24,15 @@
   </thead>
   <tbody>
     <tr data-th-each="alumno : ${listadoAlumnos}">
-      <td data-th-text="${carrera.dni}"> </td>
-      <td data-th-text="${carrera.nombre}"> </td>
-      <td data-th-text="${carrera.apellido}"> </td>
-      <td data-th-text="${carrera.email}"> </td>
-      <td data-th-text="${carrera.telefono}"> </td>
-      <td data-th-text="${carrera.fechaNacimiento}"> </td>
-      <td data-th-text="${carrera.domicilio}"> </td>
-      <td data-th-text="${carrera.LU}"> </td>
-      <td data-th-text="${carrera.estado}"> </td>
+      <td data-th-text="${alumno.dni}"> </td>
+      <td data-th-text="${alumno.nombre}"> </td>
+      <td data-th-text="${alumno.apellido}"> </td>
+      <td data-th-text="${alumno.email}"> </td>
+      <td data-th-text="${alumno.telefono}"> </td>
+      <td data-th-text="${alumno.fechaNacimiento}"> </td>
+      <td data-th-text="${alumno.domicilio}"> </td>
+      <td data-th-text="${alumno.LU}"> </td>
+      <td data-th-text="${alumno.estado}"> </td>
       <td>
       		<a data-th-href="@{'/eliminarAlumno/'+${alumno.dni}} " class="btn btn-danger">Borrar</a>
       		<a data-th-href="@{'/modificarAlumno/'+${alumno.dni}} " class="btn btn-warning">Modificar</a>
