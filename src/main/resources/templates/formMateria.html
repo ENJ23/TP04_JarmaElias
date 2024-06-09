@@ -18,7 +18,7 @@
 	<h1>FORMULARIO DE MATERIAS</h1>
 			
 		<form data-th-object="${nuevaMateria}"
-		data-th-action="@{/guardarMateria}"
+		data-th-action="${flag}?@{/modificarMateria}:@{/guardarMateria}"
 		method="post"
 		>
 		  <div class="col-md-4">
@@ -40,26 +40,24 @@
 		  <div class="col-md-4">
 		    <label for="Modalidad" class="form-label">Modalidad: </label>
 		    <select class="form-control" id="InputCodigo" data-th-field="*{modalidad}">
-		    	<option value="Presencial">
-		    	<option value="Virtual">
+		    	<option value="Presencial">Presencial</option>
+		    	<option value="Virtual">Virtual</option>
 		    </select>
 		  </div>
-			<div class="col-md-4">
-		    <label for="Docente" class="form-label">Docente: </label>
-		    <select id="Docente" name="docente" data-th-field="*{docente}" required class="form-control bg-dark text-white">
-	            <option value="">Seleccione un Docente</option>
-	            <option data-th-each="d:${listadoDocentes}" data-th-value="${d}" data-th-text="${d.apellido}"></option>
-
-        	</select>
-		    </div>
-		    <div class="col-md-4">
-		    <label for="Carrera" class="form-label">Carrera: </label>
-		    <select id="Carrera" name="carrera" data-th-field="*{carrera}" class="form-control bg-dark text-white">
-	            <option value="">Seleccione una Carrera</option>
-	            <option data-th-each="c:${listadoCarreras}" data-th-value="${c}" data-th-text="${c.nombre}"></option>
-
-        	</select>
-		    </div>
+			<div class="col-6">
+			<label for="docente" class="form-label">Docente</label>
+			<select id="docente" data-th-field="*{docente.legajo}" class="form-select bg-dark text-white" required>
+				<option value="">Seleccionar Docente</option>
+				<option data-th-each="d:${listadoDocente}" data-th-value="${d.legajo}" data-th-text="${d.apellido}"></option>
+			</select>
+			</div>
+		    <div class="col-6">
+			<label for="carrera" class="form-label">Carrera: </label>
+			<select id="carrera" data-th-field="*{carrera.codigo}" class="form-select bg-dark text-white" required>
+				<option value="">Seleccionar Carrera</option>
+				<option data-th-each="c:${listadoCarrera}" data-th-value="${c.codigo}" data-th-text="${c.nombre}"></option>
+			</select>
+		</div><br>
 		  <button type="submit" class="btn btn-primary">Guardar</button>
 		</form>
 	</div>

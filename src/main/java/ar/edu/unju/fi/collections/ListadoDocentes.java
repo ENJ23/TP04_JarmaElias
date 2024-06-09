@@ -15,7 +15,7 @@ public class ListadoDocentes {
 		return docentes;
 	}
 	
-	public static Docente buscarCarreraPorCodigo (Integer legajo) {
+	public static Docente buscarDocentePorLegajo (String legajo) {
 		for (Docente d: docentes) {
 			if (d.getLegajo().equals(legajo)){
 				return d;
